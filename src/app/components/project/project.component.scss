@@ -1,0 +1,49 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.project{
+	position: relative;
+	padding-top: 4rem;
+}
+.projectDetails{
+	position: fixed;
+	width: 100%;
+	background-color: #535353;
+	padding: 0.5rem 4rem;
+	color: #f0f0f0;
+	height: 2.5rem;
+	p{
+		margin-bottom: 0;
+	}
+	.projectDetails{
+		float: left;
+	}
+}
+.tool-box{
+	position: fixed;
+	left: 0;
+	top: 4rem;
+	padding-top: 1rem;
+	color: #fafafa;
+	height: 100vh;
+	background-color: #535353;
+	border-right: 2px solid #2d2d2d;
+	.title{
+		margin-bottom: 0;
+	}
+}
+.projectImage{
+	position: relative;
+	margin: 2.5rem 1rem 0 4rem;
+	img{
+		width: 100%;
+	}
+}
+.tool-block{
+	position: absolute;
+	color:#fff;
+}
+.projectComment{
+	position: absolute;
+	
+}

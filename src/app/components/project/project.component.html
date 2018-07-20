@@ -1,0 +1,26 @@
+<div class="project">
+	<div class="projectDetails">
+		<p class="title">Project name <span>v00.01</span></p>
+		<p class="version"></p>
+	</div>
+	<div class="tool-box">
+		<app-tool-block></app-tool-block>	
+	</div>
+	<div class="projectImage">
+		<img (click)="getCoords($event)" src="../../assets/images/logo.svg" alt="Where are you logo">
+		
+		<app-project-comments
+		class="projectComment"
+		*ngFor="let pCom of projectComments"
+		[ngStyle]="{
+			'top':pCom.commentCoords.y+'%',
+			'left':pCom.commentCoords.x+'%'
+		}"
+		></app-project-comments>
+	</div>
+	<div class="comments-block">
+		<span class="bg-primary">2</span>
+		<span class="bg-success">2</span>
+		<span class="bg-danger">2</span>
+	</div>
+</div>

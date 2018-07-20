@@ -1,0 +1,16 @@
+<div class="containder">
+	<div class="home">
+		<ul class="project-list">
+			<li *ngFor="let x of ongoingProjects">
+				<app-project-list-item [routerLink]="['../project']"></app-project-list-item>
+			</li>
+		</ul>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<button type="button" class="btn btn-info">Create template modal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

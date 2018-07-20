@@ -1,0 +1,13 @@
+.home{
+	min-height: 100vh;
+}
+.project-list{
+	padding: 5rem 0;
+	overflow: hidden;
+	list-style: none;
+	li{
+		float: left;
+		width: 200px;
+		margin-left: 2rem;
+	}
+}
