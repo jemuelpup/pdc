@@ -1,3 +1,6 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
 .tools{
 	display: flex;
 	flex-direction: column;
@@ -7,8 +10,36 @@
 	margin-right: 0;
 	padding-left: 0;
 	li{
+		position: relative;
 		height: 1.75rem;
 		color: #fff;
 		text-align: center;
+		margin-bottom: 0.5rem;
+		.tool-tip{
+			display: none;
+			position: absolute;
+			z-index: 200;
+			padding: 2px 5px 3px;
+		    left: 30px;
+		    top: 3px;
+		    width: 100px;
+		    font-size: 12px;
+		    text-align: center;
+			@include border-radius(0.5rem);
+		     /* Fallback for web browsers that don't support RGBa */
+		    background-color: rgb(0, 0, 0);
+		    /* RGBa with 0.6 opacity */
+		    background-color: rgba(0, 0, 0, 0.6);
+		    /* For IE 5.5 - 7*/
+		    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+		    /* For IE 8*/
+		    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+		}
+		&:hover{
+			cursor: pointer;
+			.tool-tip{
+				display: block;
+			}
+		}
 	}
 }

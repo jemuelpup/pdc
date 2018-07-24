@@ -1,0 +1,5 @@
+<div class="action-icon">
+	<fa-icon icon='{aicon.icon}' *ngIf="aicon.regular"></fa-icon>
+	<fa-icon [icon]="['far', '{aicon.icon}']" *ngIf="!aicon.regular"></fa-icon>
+	 <span class="tool-tip">aicon.toolTip</span>
+</div>

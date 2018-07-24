@@ -1,5 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FormsModule  } from '@angular/forms';
+
+import { environment } from './../environments/environment';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,15 +24,20 @@ import { LoginComponent } from './components/login/login.component';
 import { TeamComponent } from './components/team/team.component';
 import { MemberComponent } from './components/member/member.component';
 import { WorkSpaceComponent } from './components/work-space/work-space.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { ChatMemberComponent } from './components/chat-member/chat-member.component';
+import { ChatListComponent } from './components/chat-list/chat-list.component';
+import { ChatBoxComponent } from './components/chat-box/chat-box.component';
+import { ChatAreaComponent } from './components/chat-area/chat-area.component';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBell,faTimes,faMobileAlt,faBox,
-  faSignOutAlt, faUserFriends, faClipboardList, faUserPlus,
-  faCodeBranch, faFile, faLink } from '@fortawesome/free-solid-svg-icons';
+faSignOutAlt, faUserFriends, faClipboardList, faUserPlus,
+faCodeBranch, faFile, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faStar , faComments } from '@fortawesome/free-regular-svg-icons';
 import { ProjectTaskComponent } from './components/project-task/project-task.component';
-import { LeadingQuestionComponent } from './components/leading-question/leading-question.component';
+import { ActionButtonsComponent } from './components/action-buttons/action-buttons.component';
+
 library.add(faTimes);
 library.add(faComments);
 library.add(faBell);
@@ -60,12 +72,20 @@ library.add(faLink);
     MemberComponent,
     WorkSpaceComponent,
     ProjectTaskComponent,
-    LeadingQuestionComponent,
+    ChatMemberComponent,
+    ChatListComponent,
+    ChatBoxComponent,
+    ChatAreaComponent,
+    ActionButtonsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
