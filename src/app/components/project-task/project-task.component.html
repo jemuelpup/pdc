@@ -1,0 +1,10 @@
+<div class="projectTrigger" (click)="showComment()"></div>
+<div class="projectCommentBox" *ngIf="showCommentList">
+	<p>testing here...</p>
+</div>
+<div class="projectTaskBox" *ngIf="!showCommentList">
+	<app-member></app-member>
+	<div class="task">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque repellat laborum veritatis et ipsa, distinctio magni voluptate, mollitia, dignissimos quidem non eveniet rerum ad consequuntur magnam molestiae minima asperiores.</p>
+	</div>
+</div>

@@ -17,7 +17,7 @@ export class ProjectComponent implements OnInit {
   ngOnInit() {
   	this.projectComments = [];
 
-		for (var i = 0; i < 10; i++) {
+		for (var i = 0; i < 1; i++) {
 			this.projectComments.push(<ProjectComments>{
 			  sender: "",
 			  date: "",

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-project-comments',
-  templateUrl: './project-comments.component.html',
-  styleUrls: ['./project-comments.component.scss']
+  selector: 'app-project-task',
+  templateUrl: './project-task.component.html',
+  styleUrls: ['./project-task.component.scss']
 })
-export class ProjectCommentsComponent implements OnInit {
+export class ProjectTaskComponent implements OnInit {
 
 	showCommentList: boolean;
 

@@ -4,15 +4,15 @@
 .header{
 	position: fixed;
 	width: 100%;
-	display: flex;
 	background-color: #535353;
 	color: #ddd;
 	height: 4rem;
 	z-index: 99;
 	@include box-shadow($depth-2);
 	.logo{
-		background-color: #000;
+		// background-color: #000;
 		width: 35px;
+		margin-right: 1rem;
 		img{
 			width: 100%;
 		}
@@ -20,7 +20,21 @@
 }
 .header-contents{
 	display: flex;
-	// justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 0;
+}
+.search{
+	width: 20rem;
+	height: 2rem;
+	border: 0;
+	input{
+		border: 0;
+	}
+	.search-button{
+		background-color: #000;
+		color: #fff;
+		border: 0;
+	}
 }
 
 ul{

@@ -1,0 +1,27 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.projectTrigger{
+	width: 2rem;
+	height: 2rem;
+	@include border-radius(100%);
+	background-color: red;
+}
+.projectTaskBox{
+	padding: 0.5rem 0.5rem;
+	width: 15rem;
+	background-color: #fff;
+	@include border-radius(1rem);
+	@include box-shadow($depth-2);
+}
+
+app-member{
+	margin-bottom: 0.5rem;
+	display: block;
+}
+.task{
+	padding: 0 0.5rem;
+	p:last-child{
+		margin-bottom: 0;
+	}
+}

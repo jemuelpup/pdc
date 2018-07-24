@@ -1,0 +1,28 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+
+.member{
+	display: flex;
+	align-items: center;
+}
+
+.member-img-icon{
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1rem;
+	margin-bottom: 0;
+	background-color: #ccc;
+	@include border-radius(100%);
+	img{
+		width: 100%;
+	}
+}
+.member-info{
+	.name{
+		font-weight: 700;
+	}
+	p{
+		margin-bottom: 0;
+	}
+}

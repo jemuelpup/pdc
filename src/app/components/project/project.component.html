@@ -9,14 +9,14 @@
 	<div class="projectImage">
 		<img (click)="getCoords($event)" src="../../assets/images/logo.svg" alt="Where are you logo">
 		
-		<app-project-comments
+		<app-project-task
 		class="projectComment"
 		*ngFor="let pCom of projectComments"
 		[ngStyle]="{
 			'top':pCom.commentCoords.y+'%',
 			'left':pCom.commentCoords.x+'%'
 		}"
-		></app-project-comments>
+		></app-project-task>
 	</div>
 	<div class="comments-block">
 		<span class="bg-primary">2</span>

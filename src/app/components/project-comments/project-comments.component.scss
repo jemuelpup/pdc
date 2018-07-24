@@ -1,9 +1,0 @@
-@import '../../../assets/scss/variables.scss';
-@import '../../../assets/scss/functions.scss';
-
-.projectTrigger{
-	width: 2rem;
-	height: 2rem;
-	@include border-radius(100%);
-	background-color: red;
-}

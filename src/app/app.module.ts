@@ -20,16 +20,26 @@ import { WorkSpaceComponent } from './components/work-space/work-space.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBell,faTimes,faMobileAlt,faBox } from '@fortawesome/free-solid-svg-icons';
+import { faBell,faTimes,faMobileAlt,faBox,
+  faSignOutAlt, faUserFriends, faClipboardList, faUserPlus,
+  faCodeBranch, faFile, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faStar , faComments } from '@fortawesome/free-regular-svg-icons';
-import { ProjectCommentsComponent } from './components/project-comments/project-comments.component';
+import { ProjectTaskComponent } from './components/project-task/project-task.component';
+import { LeadingQuestionComponent } from './components/leading-question/leading-question.component';
 library.add(faTimes);
 library.add(faComments);
 library.add(faBell);
 library.add(faMobileAlt);
-library.add(faComments);
 library.add(faStar);
 library.add(faBox);
+library.add(faSignOutAlt);
+library.add(faUserFriends);
+library.add(faClipboardList);
+library.add(faUserPlus);
+library.add(faCodeBranch);
+library.add(faFile);
+library.add(faLink);
+
 
 @NgModule({
   declarations: [
@@ -49,7 +59,8 @@ library.add(faBox);
     TeamComponent,
     MemberComponent,
     WorkSpaceComponent,
-    ProjectCommentsComponent,
+    ProjectTaskComponent,
+    LeadingQuestionComponent,
   ],
   imports: [
     BrowserModule,

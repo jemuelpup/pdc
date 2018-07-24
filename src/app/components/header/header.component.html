@@ -2,19 +2,19 @@
 	<div class="container-fluid">
 		<div class="header-contents">
 			<div class="logo">
-				<p><img src="../../assets/images/logo.svg" alt="Where are you logo"></p>
+				<a [routerLink]="['../home']"><img src="../../assets/images/logo.svg" alt="Where are you logo"></a>
 			</div>
-			<ul class="actions">
-				<li><a href="#">Project</a></li>
-				<li><a href="#">Activity</a></li>
-				<li><a href="#">Teams</a></li>
-				<li><a href="#">...</a></li>
-			</ul>
+			<div class="input-group search">
+			  <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="basic-addon2">
+			  <div class="input-group-append">
+			    <span class="input-group-text search-button" id="basic-addon2">Search</span>
+			  </div>
+			</div>
 			<ul class="account-info">
-				<li>Notifictions</li>
-				<li>Sync</li>
-				<li>Plans</li>
-				<li>Profile</li>
+				<li><fa-icon icon="user-friends"></fa-icon></li>
+				<li><fa-icon icon="bell"></fa-icon></li>
+				<li><fa-icon [icon]="['far', 'comments']"></fa-icon></li>
+				<li><fa-icon icon="sign-out-alt"></fa-icon></li>
 			</ul>
 		</div>
 	</div>
