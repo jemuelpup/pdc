@@ -4,22 +4,24 @@
 		<p class="title">Project name <span>v00.01</span></p>
 		<p class="version"></p>
 	</div>
+	<<!-- div class="taskForm">
+		<app-task></app-task>
+	</div> -->
 	<div class="projectImage">
 		<img (click)="getCoords($event)" src="../../assets/images/logo.svg" alt="Where are you logo">
-		
-		<app-project-task
-		class="projectComment"
-		*ngFor="let pCom of projectComments"
-		[ngStyle]="{
-			'top':pCom.commentCoords.y+'%',
-			'left':pCom.commentCoords.x+'%'
-		}"
-		></app-project-task>
-	</div>
-	<div class="comments-block">
-		<span class="bg-primary">2</span>
-		<span class="bg-success">2</span>
-		<span class="bg-danger">2</span>
+		<app-task-list></app-task-list>
+		<div 
+		class="tasksInput"
+		*ngIf="assigningTask"
+		[ngStyle]="{'top':taskPositionY+'%','left':taskPositionX+'%'}"
+		>
+			<div class="taskAssignment">
+				<span class="assign-task"></span>
+				<p class="task-label" (click)="showTaskForm=!showTaskForm">New task</p>
+				<span class="close-task" (click)="closeTask()">X</span>
+			</div>
+			<app-task *ngIf="showTaskForm" [coords]="coordinate"></app-task>
+		</div>
 	</div>
 	<div class="tool-box">
 		<app-tool-block></app-tool-block>	

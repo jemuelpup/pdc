@@ -1,0 +1,30 @@
+<!-- <div class="projectTrigger" (click)="showComment()"></div>
+<div class="projectCommentBox" *ngIf="showCommentList">
+	<p>testing here...</p>
+</div>
+<div class="projectTaskBox" *ngIf="!showCommentList">
+	<app-member></app-member>
+	<div class="task">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque repellat laborum veritatis et ipsa, distinctio magni voluptate, mollitia, dignissimos quidem non eveniet rerum ad consequuntur magnam molestiae minima asperiores.</p>
+	</div>
+</div> -->
+
+
+<div 
+class="task"
+*ngFor="let task of taskList;let i = index;trackBy:$key"
+[ngStyle]="{'top':task.coords.y+'%','left':task.coords.x+'%'}">
+	<div class="projectTrigger" (click)="activeTasks[i].opened=!activeTasks[i].opened"></div>
+	
+	<div 
+	class="task-details"
+	[ngClass]="{
+	'left-position': task.coords.x>=0 && task.coords.x<20,
+	'centered-position': task.coords.x>=20 && task.coords.x<80,
+	'right-position': task.coords.x>=80 && task.coords.x<=100
+	}"
+	*ngIf="activeTasks[i].opened">;
+		<p>{{test}}</p>
+		<p>sdfasdfadsfaf</p>
+	</div>
+</div>

@@ -1,0 +1,70 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/functions.scss';
+
+.projectTrigger{
+	width: 1rem;
+	height: 1rem;
+	background-color: red;
+	opacity: 0.8;
+	@include border-radius(100%);
+	&:before{
+		position: absolute;
+		content: "";
+		opacity: 0.1;
+		width: 1.75rem;
+		height: 1.75rem;
+		background: #00FF48;
+    	display: block;
+    	left:50%;
+    	top:50%;
+    	animation: pulse 3s linear infinite alternate;
+    	@include transform(translate(-50%,-50%));
+		@include border-radius(100%);
+	}
+}
+
+@keyframes pulse {
+  0%, 100% {
+  	width: 1rem;
+	height: 1rem;
+  }
+  50% {
+    width: 1.75rem;
+	height: 1.75rem;
+  }
+}
+.projectTaskBox{
+	padding: 0.5rem 0.5rem;
+	width: 15rem;
+	background-color: #fff;
+	@include border-radius(1rem);
+	@include box-shadow($depth-2);
+}
+
+app-member{
+	margin-bottom: 0.5rem;
+	display: block;
+}
+.task{
+	position: absolute;
+	.task-details{
+		position: absolute;
+		background-color: #fff;
+		padding: 0 0.5rem;
+		@include border-radius(1rem);
+		@include box-shadow($depth-2);
+		p:last-child{
+			margin-bottom: 0;
+		}
+		&.centered-position{
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+		&.left-position{
+			left: 0;
+		}
+		&.right-position{
+			right: 0;
+		}
+	}
+}

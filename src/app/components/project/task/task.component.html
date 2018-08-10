@@ -1,0 +1,50 @@
+<form 
+class="taskForm"
+#taskForm="ngForm" 
+(ngSubmit)="onSubmit(taskForm)">
+	<h1 (click)="test()">New Task</h1>
+	<div class="form-group">
+		<label>task</label>
+		<input type="text"
+		class="form-control"
+		name="task"
+		#task="ngModel"
+		[(ngModel)] = "ps.selectedTask.task" required>
+	</div>
+	<div class="form-group">
+		<label>taskName</label>
+		<input type="text"
+		class="form-control"
+		name="taskName"
+		#taskName="ngModel"
+		[(ngModel)] = "ps.selectedTask.taskName" required>
+	</div>
+	<div class="form-group">
+		<label>Task Description</label>
+		<input type="text"
+		class="form-control"
+		name="taskDescription"
+		#taskDescription="ngModel"
+		[(ngModel)] = "ps.selectedTask.taskDescription">
+	</div>
+	<div class="form-group">
+		<label>assignedBy</label>
+		<input type="text"
+		class="form-control"
+		name="assignedBy"
+		#assignedBy="ngModel"
+		[(ngModel)] = "ps.selectedTask.assignedBy" required>
+	</div>
+	<div class="form-group">
+		<label>assignedTo</label>
+		<input type="text"
+		class="form-control"
+		name="assignedTo"
+		#assignedTo="ngModel"
+		[(ngModel)] = "ps.selectedTask.assignedTo" required>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-default" type="submit" [disabled]="!taskForm.valid">Submit</button>
+		<button class="btn btn-default" type="button" (click)="resetForm()">Reset</button>
+	</div>
+</form>

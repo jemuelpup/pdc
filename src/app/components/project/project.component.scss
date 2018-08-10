@@ -3,13 +3,13 @@
 
 .project{
 	position: relative;
-	padding-top: 4rem;
+	padding: 4rem 0 0 3rem;
 }
 .projectDetails{
 	position: fixed;
 	width: 100%;
 	background-color: #535353;
-	padding: 0.5rem 4rem;
+	padding: 0.5rem 1rem;
 	color: #f0f0f0;
 	height: 2.5rem;
 	p{
@@ -34,9 +34,51 @@
 }
 .projectImage{
 	position: relative;
-	margin: 2.5rem 1rem 0 4rem;
+	margin: 2.5rem 0 0 0;
 	img{
 		width: 100%;
+	}
+	.tasksInput{
+		position: absolute;
+		background-color: #fff;
+		border: 1px solid #222;
+		@include box-shadow($depth-1);
+		.taskAssignment{
+			position: relative;
+			padding: 0.25rem;
+			margin-bottom: 0;
+			> p{
+				margin-bottom: 0;
+				padding: 0.25rem 0.5rem;
+				&:hover{
+					cursor: pointer;
+					background-color: #535353;
+					color: #fafafa;
+				}
+			}
+			.assign-task,
+			.close-task{
+				position: absolute;
+				color: #fff;
+				background-color: red;
+				right: -18px;
+				top: -18px;
+				width: 25px;
+				height: 25px;
+				text-align: center;
+				opacity: 0.5;
+				@include border-radius(100%);
+				&:hover{
+					cursor: pointer;
+					opacity: 1;
+				}
+			}
+			.assign-task{
+				background-color: green;
+				right: unset;
+				left: -18px
+			}
+		}
 	}
 }
 .tool-block{
@@ -45,5 +87,4 @@
 }
 .projectComment{
 	position: absolute;
-	
 }

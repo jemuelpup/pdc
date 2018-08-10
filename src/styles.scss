@@ -7,3 +7,15 @@
     clear: both;
     display: table;
 }
+
+input.ng-invalid.ng-dirty{
+	border: 1px solid red;
+}
+
+button:hover,a.btn:hover{
+	cursor: pointer;
+}
+ul{
+	padding-left: 0;
+	list-style: none;
+}

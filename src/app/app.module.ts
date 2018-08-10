@@ -37,6 +37,9 @@ faCodeBranch, faFile, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faStar , faComments } from '@fortawesome/free-regular-svg-icons';
 import { ProjectTaskComponent } from './components/project-task/project-task.component';
 import { ActionButtonsComponent } from './components/action-buttons/action-buttons.component';
+import { TaskComponent } from './components/project/task/task.component';
+import { TaskListComponent } from './components/project/task-list/task-list.component';
+import { NgInitDirective } from './directives/ng-init.directive';
 
 library.add(faTimes);
 library.add(faComments);
@@ -77,6 +80,9 @@ library.add(faLink);
     ChatBoxComponent,
     ChatAreaComponent,
     ActionButtonsComponent,
+    TaskComponent,
+    TaskListComponent,
+    NgInitDirective,
   ],
   imports: [
     BrowserModule,
